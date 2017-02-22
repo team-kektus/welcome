@@ -1,0 +1,51 @@
+{
+  "app": {
+    "root": "app/",
+    "fallback": "app/index.html",
+    "index": "app/index.html",
+    "sass": "app/**/*.scss",
+    "injectorder": [
+      "app/lib/js/jquery.min.js",
+      "app/lib/js/bootstrap.min.js",
+      "app/lib/js/angular.min.js",
+      "app/lib/css/*.css",
+      "app/lib/js/*.js",
+      "app/**/*.css",
+      "app/**/*.module.js",
+      "app/**/*.js"
+    ]
+  },
+  "lib": {
+    "js": "app/lib/js",
+    "css": "app/lib/css",
+    "fonts": "app/lib/fonts"
+  },
+
+
+  "bowerConfig": {
+    "overrides": {
+      "bootstrap": {
+        "main": [
+          "dist/css/bootstrap.min.css",
+          "dist/css/bootstrap-theme.min.css",
+          "dist/js/bootstrap.min.js",
+          "fonts/glyphicons-halflings-regular.eot",
+          "fonts/glyphicons-halflings-regular.svg",
+          "fonts/glyphicons-halflings-regular.ttf",
+          "fonts/glyphicons-halflings-regular.woff",
+          "fonts/glyphicons-halflings-regular.woff2"
+        ]
+      },
+      "jquery": {
+        "main": [
+          "dist/jquery.min.js"
+        ]
+      },
+      "angular": {
+        "main" :[
+          "angular.min.js"
+        ]
+      }
+    }
+  }
+}
