@@ -59,7 +59,7 @@ namespace :deploy do
 
   task :restart_app do
     on roles(:app) do
-      execute "pm2 startOrRestart #{user_path}/pm2_conf/welcome.ecosystem.js"
+      execute "pm2 startOrRestart #{user_path}/pm2_conf/welcome.ecosystem.json"
     end
   end
 
