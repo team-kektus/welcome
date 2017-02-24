@@ -1,5 +1,8 @@
 angular.module('welcome', [
-  'ui.router'
+  'ui.router',
+  'welcome.home',
+  'welcome.contact',
+  'welcome.about'
 ])
 
 

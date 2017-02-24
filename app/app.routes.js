@@ -1,15 +1,37 @@
 angular.module('welcome')
   .config(function ($stateProvider) {
     $stateProvider
-      .state('index', {
+      .state('home', {
         url: '/',
         views: {
           '@': {
-            templateUrl: 'index/index.template.html',
-            controller: 'IndexController',
+            templateUrl: 'home/home.template.html',
+            controller: 'HomeController',
             controllerAs: 'ctrl'
           }
         }
       })
+
+      .state('contact', {
+        url: '/contact',
+        views: {
+          '@': {
+            templateUrl: 'contact/contact.template.html',
+            controller: 'ContactController',
+            controllerAs: 'ctrl'
+          }
+        }
+      })
+
+    .state('about', {
+      url: '/about',
+      views: {
+        '@': {
+          templateUrl: 'about/about.template.html',
+          controller: 'AboutController',
+          controllerAs: 'ctrl'
+        }
+      }
+    })
 
   })
