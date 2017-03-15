@@ -20,6 +20,10 @@ h6 {
   align: center;
 }
 
+.paddingbottom {
+  padding-bottom: 100px;
+}
+
 .topnav {
     font-size: 14px;
 }
@@ -54,7 +58,7 @@ h6 {
     position: absolute;
     height: 100%;
     width: 100%;
-    overflow:hidden;
+    //overflow:hidden;
 }
 
 .intro-background {
@@ -64,7 +68,7 @@ h6 {
   position: absolute;
   height: 100%;
   width: 100%;
-  overflow:hidden;
+  //overflow:hidden;
 }
 
 .intro-message {
@@ -184,12 +188,12 @@ h6 {
 footer {
     padding: 20px 0;
     background-color: #f8f8f8;
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: 0;
     height: 100px;
     width: 100%;
-    overflow:hidden;
+    //overflow:hidden;
 }
 
 p.copyright {
