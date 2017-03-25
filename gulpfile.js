@@ -13,7 +13,7 @@ const assets = require('bower-files')(config.bowerConfig);
 
 gulp.task('server', function () {
   connect.server({
-    root: config.app.root,
+    root: [config.app.root, config.app.staticfiles_path],
     port: 8000,
     livereload: true,
     fallback: config.app.fallback,

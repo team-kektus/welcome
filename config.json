@@ -1,6 +1,7 @@
 {
   "app": {
     "root": "app/",
+    "staticfiles_path": "../staticfiles",
     "fallback": "app/index.html",
     "index": "app/index.html",
     "sass": "app/**/*.scss",
