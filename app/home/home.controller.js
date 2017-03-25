@@ -1,21 +1,28 @@
 class HomeController {
-  constructor() {
+  constructor($location) {
     console.log('Initializing HomeController');
-    this.model = {username: "", password: ""}
+    this.$location = $location
 
+    this.model = {email: "", password: ""}
   }
-  consolelog() {
-      console.log("Clicked button");
-      if (this.model.username == "tere" && this.model.password == "1234 ") {
-        window.location.href="http://kodu.ut.ee/~qristjan/protot%C3%BC%C3%BCp/profile.html";
-      }
-      else (
-        console.log("Tere")
-      )
+
+  login() {
+    console.log(this.model);
+    fetch('/api/v1/auth/', {
+      method: 'POST',
+      headers: new Headers({'Content-Type': 'application/json'}),
+      body: JSON.stringify(this.model)
+    }).then(() => {
+      window.location.path = '/app/'
+      window.location.reload()
+    }).catch(response => {
+      console.log(response)
+    })
   }
 }
 
 angular.module('welcome.home')
   .controller('HomeController', [
+    '$location',
     HomeController
   ])

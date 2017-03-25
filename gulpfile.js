@@ -18,11 +18,17 @@ gulp.task('server', function () {
     livereload: true,
     fallback: config.app.fallback,
     middleware: function () {
-      apiProxy = proxymiddleware('/api', {
+      apiProxy = proxymiddleware('/api/', {
         target: 'http://localhost:7000',
         pathRewrite: {'^/api': ''}
       });
-      return [apiProxy];
+
+      appProxy = proxymiddleware('/app/', {
+        target: 'http://localhost:9000',
+        pathRewrite: {'^/app': ''}
+      });
+
+      return [apiProxy, appProxy];
     }
   })
 })
