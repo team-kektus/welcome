@@ -34,4 +34,20 @@ angular.module('welcome')
       }
     })
 
+    .state('application', {
+      resolve: {
+        redirect($window) {
+          $window.location.href = '/app/'
+        }
+      }
+    })
+
+    .state('application.login', {
+      resolve: {
+        redirect($window) {
+          $window.location.href = '/app/login/'
+        }
+      }
+    })
+
   })

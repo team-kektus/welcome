@@ -1,28 +1,34 @@
 class HomeController {
-  constructor($location) {
+  constructor($state, $http) {
     console.log('Initializing HomeController');
-    this.$location = $location
+    this.$state = $state
+    this.$http = $http
 
     this.model = {email: "", password: ""}
   }
 
   login() {
-    console.log(this.model);
-    fetch('/api/v1/auth/', {
+    this.$http({
       method: 'POST',
-      headers: new Headers({'Content-Type': 'application/json'}),
-      body: JSON.stringify(this.model)
-    }).then(() => {
-      window.location.path = '/app/'
-      window.location.reload()
+      url: '/api/v1/auth/',
+      headers: { 'Content-Type': 'application/json' },
+      data: JSON.stringify(this.model)
+    }).then(response => {
+      this.$state.go('application')
     }).catch(response => {
-      console.log(response)
+      console.log('le wild error appeared:');
+      console.log(response);
     })
+  }
+
+  goToRegister() {
+    this.$state.go('application.login')
   }
 }
 
 angular.module('welcome.home')
   .controller('HomeController', [
-    '$location',
+    '$state',
+    '$http',
     HomeController
   ])
