@@ -9,7 +9,7 @@
       "app/lib/js/jquery.min.js",
       "app/lib/js/bootstrap.min.js",
       "app/lib/js/angular.min.js",
-      "app/lib/js/angular-translate",
+      "app/lib/js/angular-translate.js",
       "app/lib/css/*.css",
       "app/lib/js/*.js",
       "app/**/*.css",
