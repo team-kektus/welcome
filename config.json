@@ -45,7 +45,8 @@
       },
       "angular": {
         "main" :[
-          "angular.min.js"
+          "angular.min.js",
+          "angular-translate.js"
         ]
       }
     }
