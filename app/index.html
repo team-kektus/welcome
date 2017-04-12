@@ -31,7 +31,7 @@
 
   </head>
 
-  <body>
+  <body ng-app="welcome" ng-controller="welcomeCtrl as welcomeCtrl">
 
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -55,10 +55,13 @@
            <ul class="nav navbar-nav navbar-right">
 
              <li>
-               <a data-ui-sref='about'>Meist</a>
+               <a data-ui-sref='about'>{{ 'ABOUT' | translate }}</a>
              </li>
              <li>
-               <a data-ui-sref='contact'>Kontakt</a>
+               <a data-ui-sref='contact'>{{ 'CONTACT' | translate }}</a>
+             </li>
+             <li class="langbox">
+               <select class="styled-select" ng-options="language | translate for language in welcomeCtrl.languages" ng-model="welcomeCtrl.language" ng-change="welcomeCtrl.updateLanguage()"></select>
              </li>
            </ul>
          </div>
@@ -80,18 +83,18 @@
            <div class="col-lg-12">
              <ul class="list-inline">
                <li>
-                 <a data-ui-sref='home'>Kodu</a>
+                 <a data-ui-sref='home'>{{ 'HOME' | translate }}</a>
                </li>
                <li class="footer-menu-divider">&sdot;</li>
                <li>
-                 <a data-ui-sref='about'>Meist</a>
+                 <a data-ui-sref='about'>{{ 'ABOUT' | translate }}</a>
                </li>
                <li class="footer-menu-divider">&sdot;</li>
                <li>
-                 <a data-ui-sref='contact'>Kontakt</a>
+                 <a data-ui-sref='contact'>{{ 'CONTACT' | translate }}</a>
                </li>
              </ul>
-             <p class="copyright text-muted small">Copyright &copy; Team Kektus. Kõik õigused reserveeritud.</p>
+             <p class="copyright text-muted small">Copyright &copy; Team Kektus. {{ 'CPY' | translate }}</p>
            </div>
          </div>
        </div>
@@ -101,6 +104,7 @@
     <script src="lib/js/jquery.min.js"></script>
     <script src="lib/js/bootstrap.min.js"></script>
     <script src="lib/js/angular.min.js"></script>
+    <script src="lib/js/angular-translate.js"></script>
     <script src="lib/js/angular-ui-router.js"></script>
     <script src="app.module.js"></script>
     <script src="about/about.module.js"></script>
