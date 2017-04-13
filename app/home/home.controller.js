@@ -3,7 +3,7 @@ class HomeController {
     console.log('Initializing HomeController');
     this.$state = $state
     this.$http = $http
-
+    this.validationError = false;
     this.model = {email: "", password: ""}
   }
 
@@ -18,6 +18,8 @@ class HomeController {
     }).catch(response => {
       console.log('le wild error appeared:');
       console.log(response);
+      this.validationError = true;
+
     })
   }
 

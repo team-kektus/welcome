@@ -25,6 +25,7 @@ angular.module('welcome')
       CONTACTTXT1: 'Kontaktid',
       CONTACTTXT2: 'Infotelefon:',
       CONTACTTXT3: 'Aadress',
+      WRONGPASS: 'Sisestasite vale kasutajanime või parooli',
       en: 'English',
       ee: 'Eesti'
     })
@@ -40,6 +41,7 @@ angular.module('welcome')
       CONTACTTXT1: 'Contacts',
       CONTACTTXT2: 'Support number:',
       CONTACTTXT3: 'Address',
+      WRONGPASS: 'Username or password is incorrect',
       en: 'English',
       ee: 'Eesti'
     });

@@ -24,6 +24,9 @@
                 </fieldset>
               </form>
               <br>
+                <div class = "wrong_name" ng-show="ctrl.validationError">
+                  {{ 'WRONGPASS' | translate }}
+                </div>
               <a data-ui-sref="application.login">Register</a>
             </div>
           </div>
