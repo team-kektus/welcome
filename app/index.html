@@ -94,11 +94,35 @@
                  <a data-ui-sref='contact'>{{ 'CONTACT' | translate }}</a>
                </li>
              </ul>
-             <p class="copyright text-muted small">Copyright &copy; Team Kektus. {{ 'CPY' | translate }}</p>
+             <p id="terms" type="button" data-toggle="modal" data-target="#myModal" class="copyright text-muted small">Copyright &copy; Team Kektus. {{ 'CPY' | translate }}</p>
            </div>
          </div>
        </div>
      </footer>
+
+     <!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Tingimused</h4>
+      </div>
+      <div class="modal-body">
+        <p>1. Hindamissüsteem on mõeldud Tartu Ülikooli õppejõududele ja õpilastele.</p>
+        <p>2. Veebirakenduse kasutamine ükskõik millisel illegaalsel viisil on kriminaalkorras karistatav.</p>
+        <p>3. Team Kektus ei vastuta Teie salvestatud andmete eest.</p>
+        <p>4. Team Kektus jätab endale õiguse igal ajal muuta või täiendada reegleid.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Sulge</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 
     <!-- inject:js -->
     <script src="lib/js/jquery.min.js"></script>
