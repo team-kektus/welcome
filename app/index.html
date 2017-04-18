@@ -61,7 +61,7 @@
                <a data-ui-sref='contact'>{{ 'CONTACT' | translate }}</a>
              </li>
              <li class="langbox">
-               <select class="styled-select" ng-options="language | translate for language in welcomeCtrl.languages" ng-model="welcomeCtrl.language" ng-change="welcomeCtrl.updateLanguage()"></select>
+               <select class="styled-select" data-ng-options="language | translate for language in welcomeCtrl.languages" data-ng-model="welcomeCtrl.language" data-ng-change="welcomeCtrl.updateLanguage()"></select>
              </li>
            </ul>
          </div>
@@ -94,7 +94,7 @@
                  <a data-ui-sref='contact'>{{ 'CONTACT' | translate }}</a>
                </li>
              </ul>
-             <p id="terms" type="button" data-toggle="modal" data-target="#myModal" class="copyright text-muted small">Copyright &copy; Team Kektus. {{ 'CPY' | translate }}</p>
+             <div id="terms" data-toggle="modal" data-target="#myModal" class="copyright text-muted small">Copyright &copy; Team Kektus. {{ 'CPY' | translate }}</div>
            </div>
          </div>
        </div>
@@ -132,12 +132,12 @@
     <script src="lib/js/angular-ui-router.js"></script>
     <script src="app.module.js"></script>
     <script src="about/about.module.js"></script>
-    <script src="home/home.module.js"></script>
     <script src="contact/contact.module.js"></script>
+    <script src="home/home.module.js"></script>
     <script src="app.routes.js"></script>
     <script src="about/about.controller.js"></script>
-    <script src="home/home.controller.js"></script>
     <script src="contact/contact.controller.js"></script>
+    <script src="home/home.controller.js"></script>
     <!-- endinject -->
 
   </body>
