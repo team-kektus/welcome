@@ -68,6 +68,15 @@ h6 {
   margin-left: 15px;
 }
 
+.login_button {
+    @media screen and (min-height: 750px), screen and (min-width: 750px) {
+     display: none;
+    }
+    @media screen and (max-height: 750px), screen and (max-width: 750px) {
+      display: block;
+     }
+}
+
 .intro-header {
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 50px;
@@ -83,7 +92,7 @@ h6 {
   background: url("img/ut.jpg") no-repeat center center;
   background-position: top;
   background-size: cover;
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   //overflow:hidden;
