@@ -50,11 +50,11 @@ angular.module('welcome')
   })
 
   .controller('welcomeCtrl', function($translate) {
-    var ctrl = this;
+    this.language = localStorage.getItem('languagePreference') || 'ee'
+    this.languages = ['ee', 'en']
 
-    ctrl.language = 'ee';
-    ctrl.languages = ['ee', 'en'];
-    ctrl.updateLanguage = function() {
-      $translate.use(ctrl.language);
+    this.updateLanguage = () => {
+      $translate.use(this.language)
+      localStorage.setItem('languagePreference', this.language)
     };
   });
