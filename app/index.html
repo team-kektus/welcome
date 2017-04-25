@@ -31,7 +31,7 @@
 
   </head>
 
-  <body ng-app="welcome" ng-controller="welcomeCtrl as welcomeCtrl">
+  <body data-ng-app="welcome" data-ng-controller="welcomeCtrl as welcomeCtrl">
 
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -47,7 +47,7 @@
              <span class="icon-bar"></span>
              <span class="icon-bar"></span>
            </button>
-           <a data-ui-sref='home' class="navbar-brand topnav" href="#"><img src="img/utlogo.png" width="170" height="30" alt="Kektus Education Inc."></a>
+           <a data-ui-sref='home' class="navbar-brand topnav" href="#"><img data-ng-src="img/utlogo.png" width="170" height="30" alt="Kektus Education Inc."></a>
          </div>
 
          <!-- Collect the nav links, forms, and other content for toggling -->
@@ -61,7 +61,7 @@
                <a data-ui-sref='contact'>{{ 'CONTACT' | translate }}</a>
              </li>
              <li class="langbox">
-               <select class="styled-select" ng-options="language | translate for language in welcomeCtrl.languages" ng-model="welcomeCtrl.language" ng-change="welcomeCtrl.updateLanguage()"></select>
+               <select class="styled-select" data-ng-options="language | translate for language in welcomeCtrl.languages" data-ng-model="welcomeCtrl.language" data-ng-change="welcomeCtrl.updateLanguage()"></select>
              </li>
            </ul>
          </div>
@@ -94,11 +94,35 @@
                  <a data-ui-sref='contact'>{{ 'CONTACT' | translate }}</a>
                </li>
              </ul>
-             <p class="copyright text-muted small">Copyright &copy; Team Kektus. {{ 'CPY' | translate }}</p>
+             <div id="terms" data-toggle="modal" data-target="#myModal" class="copyright text-muted small">Copyright &copy; Team Kektus. {{ 'CPY' | translate }}</div>
            </div>
          </div>
        </div>
      </footer>
+
+     <!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Tingimused</h4>
+      </div>
+      <div class="modal-body">
+        <p>1. Hindamissüsteem on mõeldud Tartu Ülikooli õppejõududele ja õpilastele.</p>
+        <p>2. Veebirakenduse kasutamine ükskõik millisel illegaalsel viisil on kriminaalkorras karistatav.</p>
+        <p>3. Team Kektus ei vastuta Teie salvestatud andmete eest.</p>
+        <p>4. Team Kektus jätab endale õiguse igal ajal muuta või täiendada reegleid.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Sulge</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 
     <!-- inject:js -->
     <script src="lib/js/jquery.min.js"></script>
