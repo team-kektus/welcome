@@ -14,9 +14,9 @@
 
 
     <!-- inject:css -->
-    <link rel="stylesheet" href="lib/css/bootstrap-theme.min.css">
+    <!-- <link rel="stylesheet" href="lib/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="lib/css/bootstrap.min.css">
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="app.css"> -->
     <!-- endinject -->
 
 
@@ -31,7 +31,7 @@
 
   </head>
 
-  <body data-ng-app="welcome" data-ng-controller="welcomeCtrl as welcomeCtrl">
+  <body data-ng-app="welcome" data-ng-controller="MainController as mainctrl">
 
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -61,7 +61,7 @@
                <a data-ui-sref='contact'>{{ 'CONTACT' | translate }}</a>
              </li>
              <li class="langbox">
-               <select class="styled-select" data-ng-options="language | translate for language in welcomeCtrl.languages" data-ng-model="welcomeCtrl.language" data-ng-change="welcomeCtrl.updateLanguage()"></select>
+               <select class="styled-select" data-ng-options="language | translate for language in mainctrl.languages" data-ng-model="mainctrl.language" data-ng-change="mainctrl.updateLanguage()"></select>
              </li>
            </ul>
          </div>
@@ -125,7 +125,7 @@
 </div>
 
     <!-- inject:js -->
-    <script src="lib/js/jquery.min.js"></script>
+    <!-- <script src="lib/js/jquery.min.js"></script>
     <script src="lib/js/bootstrap.min.js"></script>
     <script src="lib/js/angular.min.js"></script>
     <script src="lib/js/angular-translate.js"></script>
@@ -137,7 +137,7 @@
     <script src="app.routes.js"></script>
     <script src="about/about.controller.js"></script>
     <script src="contact/contact.controller.js"></script>
-    <script src="home/home.controller.js"></script>
+    <script src="home/home.controller.js"></script> -->
     <!-- endinject -->
 
   </body>

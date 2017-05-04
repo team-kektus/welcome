@@ -1,0 +1,16 @@
+{
+  "ABOUT": "About us",
+  "CONTACT": "Contact",
+  "HOME": "Home",
+  "LOGIN": "Please log in",
+  "CPY": "All rights reserved.",
+  "ABOUTTXT1": "Shortly about us and the project",
+  "ABOUTTXT2": "Current webpage is created for the 'Web Application Development' course. In the development of the page there are used different languages and solutions like HTML, CSS, JavaScript, Bootstrap4, AngularJS.",
+  "ABOUTTXT3": "So much about us that we are 3 useless animals trying to get over with the day.",
+  "CONTACTTXT1": "Contacts",
+  "CONTACTTXT2": "Support number:",
+  "CONTACTTXT3": "Address",
+  "WRONGPASS": "Username or password is incorrect",
+  "en": "English",
+  "ee": "Eesti"
+}

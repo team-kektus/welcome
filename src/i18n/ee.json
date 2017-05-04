@@ -1,0 +1,16 @@
+{
+  "ABOUT": "Meist",
+  "CONTACT": "Kontakt",
+  "HOME": "Kodu",
+  "CPY": "Kõik õigused reserveeritud.",
+  "LOGIN": "Palun logi sisse",
+  "ABOUTTXT1": "Lühidalt meist ja projektist",
+  "ABOUTTXT2": "Käesolev veebileht on loodud Tartu Ülikooli 'Veebirakenduste loomine' aine raames. Veebilehe loomisel on kasutatud mitmeid erinevaid keeli ja lahendusi nagu näiteks HTML, CSS, JavaScript, Bootstrap4, AngularJS.",
+  "ABOUTTXT3": "Meist nii palju, et oleme 3 kasutut looma, kes üritavad kuidagi hommiku õhtusse veeretada.",
+  "CONTACTTXT1": "Kontaktid",
+  "CONTACTTXT2": "Infotelefon:",
+  "CONTACTTXT3": "Aadress",
+  "WRONGPASS": "Sisestasite vale kasutajanime või parooli",
+  "en": "English",
+  "ee": "Eesti"
+}
