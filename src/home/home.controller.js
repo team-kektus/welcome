@@ -1,4 +1,4 @@
-class HomeController {
+export default class HomeController {
   constructor($state, $http) {
     console.log('Initializing HomeController');
     this.$state = $state
@@ -28,9 +28,4 @@ class HomeController {
   }
 }
 
-angular.module('welcome.home')
-  .controller('HomeController', [
-    '$state',
-    '$http',
-    HomeController
-  ])
+HomeController.$inject = ['$state', '$http']
