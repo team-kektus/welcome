@@ -56,6 +56,12 @@ namespace :deploy do
     end
   end
 
+  task :install_deps do
+    on roles(:app) do
+      execute "cd #{project_path}/current && npm install"
+    end
+  end
+
 
   task :build_app do
     on roles(:app) do
@@ -66,5 +72,6 @@ namespace :deploy do
 
   before :starting, :remove_deps
   after :publishing, :add_deps
-  after :finished, :build_app
+  after :finished, :install_deps
+  after :install_deps, :build_app
 end
