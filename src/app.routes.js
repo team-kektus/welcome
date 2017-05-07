@@ -35,20 +35,24 @@ export default function routes($stateProvider) {
 
   .state('application', {
     resolve: {
-      redirect($window) {
-        $window.location.href = '/app/'
-      }
+      redirect: create_redirect('/app/')
     }
   })
 
   .state('application.login', {
     resolve: {
-      redirect($window) {
-        $window.location.href = '/app/login/'
-      }
+      redirect: create_redirect('/app/login/')
     }
   })
 
+}
+
+function create_redirect(url) {
+  var f = function ($window) {
+    $window.location.href = url
+  }
+  f.$inject = ['$window']
+  return f
 }
 
 routes.$inject = ['$stateProvider']

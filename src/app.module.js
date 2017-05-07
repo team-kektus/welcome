@@ -1,4 +1,5 @@
 import './app.scss'
+import 'bootstrap-sass/assets/javascripts/bootstrap.min'
 
 import angular from 'angular'
 import uirouter from 'angular-ui-router'
