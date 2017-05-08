@@ -1,5 +1,8 @@
 const path = require('path');
+const glob = require('glob');
 const webpack = require('webpack');
+
+const PurifyCSSPlugin = require('purifycss-webpack');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
@@ -21,6 +24,29 @@ module.exports = {
   output: {
     path: path.resolve('dist'),
     filename: 'index_bundle.js'
+  },
+  devServer: {
+    historyApiFallback: true,
+    // progress: true,
+    // hot: true,
+    inline: true,
+    // https: true,
+    port: 8080,
+    contentBase: path.resolve(__dirname, 'public'),
+    proxy: {
+      '/app/': {
+        target: 'http://localhost:8081',
+        secure: false,
+        changeOrigin: true,
+        pathRewrite: {'^/app': ''}
+      },
+      '/api/': {
+        target: 'http://localhost:7000',
+        secure: false,
+        changeOrigin: true,
+        pathRewrite: {'^/api': ''}
+      }
+    }
   },
   module: {
     loaders: [
@@ -87,7 +113,11 @@ module.exports = {
       jquery: "jquery",
       "window.jQuery": "jquery",
       jQuery:"jquery"
-    })
+    }),
+    // new PurifyCSSPlugin({
+    //   // Give paths to parse for rules. These should be absolute!
+    //   paths: glob.sync(path.join(__dirname, 'src/**/*.html')),
+    // })
   ]
 }
 
